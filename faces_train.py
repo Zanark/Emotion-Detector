@@ -37,5 +37,5 @@ for root, dirs, files in os.walk(IMAGE_DIR):
                 x_train.append(roi)
                 y_labels.append(id_)
 
-print(y_labels)
-print(x_train)
+#print(y_labels)
+#print(x_train)
