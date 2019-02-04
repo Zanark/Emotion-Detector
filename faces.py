@@ -27,6 +27,12 @@ while True:
         id_, conf = recognizer.predict(roi_gray)
         if conf>=45 and conf <=85:
             print(labels[id_])
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            name = labels[id_]
+            color = (230, 208, 48)
+            stroke = 2
+            cv2.putText(frame, name, (x,y-15), font, 1, color, stroke, cv2.LINE_AA)
+
         imgItem = "my-face.png"
         cv2.imwrite(imgItem , roi_gray)
 
