@@ -25,7 +25,7 @@ while True:
         roi_col = frame[y:y+h, x:x+w]
 
         id_, conf = recognizer.predict(roi_gray)
-        if conf>=45 and conf <=85:
+        if conf>=45:
             print(labels[id_])
             font = cv2.FONT_HERSHEY_SIMPLEX
             name = labels[id_]

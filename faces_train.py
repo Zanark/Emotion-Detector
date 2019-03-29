@@ -30,7 +30,7 @@ for root, dirs, files in os.walk(IMAGE_DIR):
                 c_id += 1
 
             id_ = label_ids[label]
-            #print(label_ids)
+            print(label_ids)
             
             pil_image = Image.open(path).convert("L")
             image_array = np.array(pil_image , "uint8")
