@@ -1,3 +1,4 @@
+# Importing dependencies
 import numpy as np
 import cv2
 import pickle
@@ -17,7 +18,10 @@ while True:
     #Capture frame by frame,
     ret, frame = cap.read()
 
+    # Color Image to Grayscale
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    
+    # Detect all the faces in the image
     faces = FaceCascade.detectMultiScale(gray, scaleFactor=1.5, minNeighbors=5)
     for(x, y, w, h) in faces:
         #print(x, y, w, h)
